@@ -1,10 +1,22 @@
 ## Learn Vue.js STEP BY STEP <img src="https://raw.githubusercontent.com/vuejs/art/master/logo.png" width=50px title="Learn Vue.js STEP BY STEP">
 
-Before you get started, you need to have fundamentals in HTML, CSS, JavaScript.
-Exactly in _HTML5_, _CSS3_, _EcmaScript 6_.
+You can't write your Vue.js code instantly.
+1. You need to include by script src="https://unpkg.com/vue"
+2. Write your code in app.js **or**  just insert between script tags.
 
-# About structure of repository.
-1. Look at branches. You should see lsn1 | The Vue instance, etc. lsn1 Means lesson 1 or just first lesson and logically lsn33 means lesson 33.
-2. Every lesson have properly written documentation or README.md
-3. This repo contains not only limited lessons. Also you can contribute and add some new features.
-For this branch that is all :) Good luck
+```javascript
+let app = new Vue({
+    el: '#app',
+});
+```
+
+you can just type it without defining to some variable like `let app`
+`el: '#app',` it accept argument or element that you have in html. usually it's div tag.
+It's like CSS selectors. # means id, . means class.
+And our html element is here.
+```
+<div id="app"> </div>
+```
+
+---
+_Every branch has his own README.md_ 
