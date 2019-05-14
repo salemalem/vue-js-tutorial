@@ -1,5 +1,12 @@
-/* 	@lesson 1 | Data & methods
+/* 	@lesson 3 | Events (ex: onclick, onmousemove)
  *  @Author: Shyngys Shynbolatov | wymedia@protonmail.com
  *  @Code from Github: https://github.com/salemalem/vue-js-tutorial
  *  @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
  */ 
+
+ .canvas{
+ 	width: 600px;
+ 	padding: 200px 20px;
+ 	text-align: center;
+ 	border: 1px solid #333;
+ }

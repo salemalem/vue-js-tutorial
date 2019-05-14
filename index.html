@@ -1,5 +1,5 @@
 <!-- 
-@lesson 1 | Data & methods
+@lesson 3 | Events (ex: onclick, onmousemove)
 @Author: Shyngys Shynbolatov | wymedia@protonmail.com
 @Code from Github: https://github.com/salemalem/vue-js-tutorial
 @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Data & methods</title>
+    <title>Events</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,13 +19,36 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
-        <!-- DATA -->
-        You've recieved message: {{ message }} <br>
-        from {{ name }}
+        <h1>Events</h1>
+        <h2>Just age++ & age--</h2>
+        <button v-on:click="age++">Add a Year(+) on:click</button>
+        <button v-on:click="age--">Subtract a Year(-) on:click</button>
+        <p>My age is {{ age }}</p>
+        <hr>
 
-        <!-- METHODS -->
-        <h1>{{ greet('afternoon') }}</h1>
-        <h2>{{ iam() }}</h2>
+        <h2>Custom method</h2>
+        <h2>Add/Subtract one year by click</h2>
+        <button v-on:click="add(1)">Add a Year(+) on:click</button>
+        <button v-on:click="subtract(1)">Subtract a Year(-) on:click</button>
+        <br><br>
+
+        <h2>Add/Subtract ten years by double click</h2>
+        <button v-on:dblclick="add(10)">Add 10 Years(+) on:dblclick</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 Years(-) on:dblclick</button>
+        <hr>
+
+        <h2>Both</h2>
+        <button v-on:click="add(1)" v-on:dblclick="add(10)">Add a Year(+) on:click | Add 10 Years(+) on:dblclick</button>
+        <button v-on:click="subtract(1)" v-on:dblclick="add(10)">Subtract a Year(-) on:click | Subtract 10 Years(-) on:dblclick</button>
+        <!-- Sorry for long name -->
+        <p>My age is {{ age }}</p>
+        <hr>
+
+        <h2>This canvas show the coordinates of your mouse</h2>
+        <div class="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
+        <!-- With just canvas tag value of x and y will not be displayed  -->
+
+
     </div>
 
     <!-- 
@@ -38,12 +61,25 @@
 
         ---------------------------------------------------------
 
-        TO SHOW THE CALLBACK of function or method call it
-        between curly braces. 
-        By callback I mean what value return your function.
+        you can use on:click & on:dblclick for double clickes.
+        then you don't need to use brackets if you don't have any arguments.
+        Vue.js automatically understands that.
+        But if you need just pass arguments
 
-        You can also pass arguments in the brackets.
-     -->
+        ---------------------------------------------------------        
+        
+        if you don't pass arguments when you call the event arguments 
+        passes automatically which shown on mousemove example with canvas.
+        It passed event to our method. Then we parsed (got) offsetX & offsetY
+        from this MouseEvent
+
+        I get this MouseEvent by simple console.log(event)
+
+        ---------------------------------------------------------
+
+        As v-bind: is equal to :
+        v-on:click is equal to @click (means onlclick, at click)
+    -->
 
 </body>
 </html>
