@@ -1,0 +1,70 @@
+<!-- 
+@lesson 2 | Data binding
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data binding</title>
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--  JS  -->
+    <script src="https://unpkg.com/vue"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--  CONTENT  -->
+        <!-- DATA -->
+        <p>Hello, my name is {{ name }}</p>
+        <hr>
+
+        <h4 class="invalid">Invalid binded link</h4>
+        <p>Checkout my <a href="website">website</a> | href="website"</p>
+        <hr>
+
+        <h4 class="valid">Correct binded link</h4>
+        <p>Checkout my <a v-bind:href="website">website</a> | href="{{website}}"</p>
+        <hr>
+
+        <h4 class="invalid">Without v-html just websiteTag inside of curly braces</h4>
+        <p>{{ websiteTag }}</p>
+        <hr>
+
+        <h4 class="valid">With v-html</h4>
+        <p v-html="websiteTag"></p>
+        <hr>
+
+
+    </div>
+
+    <!-- 
+        TO SHOW your variables which are defined in your script
+        you can use curly braces.
+        {{  }}
+
+        Insert your variable name, then browser will render and 
+        show value of variable.
+
+        ---------------------------------------------------------
+
+        If you want to bind your html element with Vue data use 
+        v-bind: directive.
+
+        :href is also correct. It's just short form.
+
+        :href="website" | No need to type between curly braces
+
+        ---------------------------------------------------------
+
+        If you want to output html as html not plaintext use v-html
+        directive.
+        Content inside of your tag won't be displayed.
+     -->
+
+</body>
+</html>
