@@ -1,5 +1,5 @@
 <!-- 
-@lesson 3 | Events (ex: onclick, onmousemove)
+@lesson 4 | Event Modifiers
 @Author: Shyngys Shynbolatov | wymedia@protonmail.com
 @Code from Github: https://github.com/salemalem/vue-js-tutorial
 @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Events</title>
+    <title>Event Modifiers</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,35 +19,19 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
-        <h1>Events</h1>
-        <h2>Just age++ & age--</h2>
-        <button v-on:click="age++">Add a Year(+) on:click</button>
-        <button v-on:click="age--">Subtract a Year(-) on:click</button>
-        <p>My age is {{ age }}</p>
-        <hr>
-
+        <h1>Event Modifiers</h1>
+        <!-- https://vuejs.org/v2/guide/events.html -->
         <h2>Custom method</h2>
-        <h2>Add/Subtract one year by click</h2>
-        <button v-on:click="add(1)">Add a Year(+) on:click</button>
+        <h2>Add/Subtract one year by click ONCE .once</h2>
+        <button v-on:click.once="add(1)">Add a Year(+) ONCE on:click.once</button>
         <button v-on:click="subtract(1)">Subtract a Year(-) on:click</button>
-        <br><br>
-
-        <h2>Add/Subtract ten years by double click</h2>
-        <button v-on:dblclick="add(10)">Add 10 Years(+) on:dblclick</button>
-        <button v-on:dblclick="subtract(10)">Subtract 10 Years(-) on:dblclick</button>
+        <p>{{ age }}</p>
         <hr>
 
-        <h2>Both</h2>
-        <button v-on:click="add(1)" v-on:dblclick="add(10)">Add a Year(+) on:click | Add 10 Years(+) on:dblclick</button>
-        <button v-on:click="subtract(1)" v-on:dblclick="add(10)">Subtract a Year(-) on:click | Subtract 10 Years(-) on:dblclick</button>
-        <!-- Sorry for long name -->
-        <p>My age is {{ age }}</p>
+        <h2>With and without prevent</h2>
+        <a @click="click" href="https://google.com">GOOGLE it (without)</a>
+        <a @click.prevent="click" href="https://google.com">GOOGLE it (with)</a>
         <hr>
-
-        <h2>This canvas show the coordinates of your mouse</h2>
-        <div class="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }}</div>
-        <!-- With just canvas tag value of x and y will not be displayed  -->
-
 
     </div>
 
@@ -68,12 +52,9 @@
 
         ---------------------------------------------------------        
         
-        if you don't pass arguments when you call the event arguments 
-        passes automatically which shown on mousemove example with canvas.
-        It passed event to our method. Then we parsed (got) offsetX & offsetY
-        from this MouseEvent
-
-        I get this MouseEvent by simple console.log(event)
+        you can modify your events with click.prevent or click.once
+        full list of modifiers here:
+            https://vuejs.org/v2/guide/events.html        
 
         ---------------------------------------------------------
 
