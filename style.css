@@ -1,34 +1,5 @@
-/* 	@lesson 8 | Dynamic CSS Classes
+/* 	@lesson 7 | Computed Properties
  *  @Author: Shyngys Shynbolatov | wymedia@protonmail.com
  *  @Code from Github: https://github.com/salemalem/vue-js-tutorial
  *  @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
  */ 
-
- span{
- 	background: red;
- 	display: inline-block;
- 	padding: 10px;
- 	color: #fff;
- 	margin: 10px 0;
- }
-
- .available span{
- 	background: green;
- }
-
- .nearby span:after{
- 	content: "nearby";
- 	margin-left: 10px;
- }
-
- .binded_input{
- 	width: 200px;
- 	height: 200px;
- }
-
- .red{ background: red; }
- .blue{ background: blue; }
- .black{ background: black; }
- .white{ background: white; }
- .yellow{ background: yellow; }
- .green{ background: green; }

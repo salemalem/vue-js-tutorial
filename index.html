@@ -1,5 +1,5 @@
 <!-- 
-@lesson 8 | Dynamic CSS Classes
+@lesson 7 | Computed Properties
 @Author: Shyngys Shynbolatov | wymedia@protonmail.com
 @Code from Github: https://github.com/salemalem/vue-js-tutorial
 @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dynamic CSS Classes</title>
+    <title>Computed Properties</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,47 +19,27 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
-        <h1>Dynamic CSS Classes</h1>
-        <h2>Example 1</h2>
-        <div :class="{available: available}" v-on:click="available = !available">
-            <span>Memes (CLICK ME)</span>
-        </div>
-        <hr>
+        <h1>Computed Properties</h1>
+        <!-- https://ru.vuejs.org/v2/guide/computed.html -->
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
 
-        <h2>Example 2</h2>
-        <button @click="nearby=!nearby">Toggle nearby</button>
-        <button @click="available=!available">Toggle available</button>
-        <div :class="compClasses">
-            <span>IT 2 chapter</span>
-        </div>
-        <hr>
+        <p>A = {{ a }}</p>
+        <p>B = {{ b }}</p>
 
-        <h2>Input binded with class of div below | Type name of color below or add yours in css</h2>
-        <h4>red
-            blue
-            black
-            white
-            yellow
-            green
-        </h4>
-        <input type="text" v-model="div_class">
-        <div class="binded_input" :class="div_class"></div>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
 
     </div>
 
     <!-- 
         
-        nearby = !nearby
-        Our nearby value is boolean. So !true = false. 
+        If you use methods in our case you will write addToA() with or without if it doesn't pass arguments.
 
-        ------------------------------------------------
-
-        Type your color name then div will be filled by this color.
-        Vue.js just edits class name of div.binded_input.
-
-        ------------------------------------------------
-
-        Good luck :)
+        But with computed you can write without, no need to type brachets.
+        If you write computed property with brackets it will error:
+        AddToA is not function.
+        like methods without arguments.
         
     -->
 
