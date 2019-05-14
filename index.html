@@ -1,5 +1,5 @@
 <!-- 
-@lesson 5 | Keyboard Events
+@lesson 6 | Two-Way Data Binding
 @Author: Shyngys Shynbolatov | wymedia@protonmail.com
 @Code from Github: https://github.com/salemalem/vue-js-tutorial
 @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Keyboard Events</title>
+    <title>Two-Way Data Binding</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,36 +19,24 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
-        <h1>Keyboard Events</h1>
+        <h1>Two-Way Data Binding</h1>
         <!-- https://www.w3schools.com/jsref/dom_obj_event.asp -->
-        <label>v-on:keyup</label>
-        <input type="text" v-on:keyup="logName">
+        <label>Name:</label>
+        <input type="text" v-model="name">
+        <span>{{ name }}</span>
         <br><br>
 
-        <label>v-on:keyup.enter</label>
-        <input type="text" v-on:keyup.enter="logName">
+        <label>Age:</label>
+        <input type="text" v-model="age">
+        <span>{{ age }}</span>
         <br><br>
-
-        <label>v-on:keyup.alt.enter</label>
-        <input type="text" v-on:keyup.alt.enter="logName">
 
     </div>
 
     <!-- 
 
-        you can use on:keyup, on:keydown & on:keypress
-
-        ---------------------------------------------------------        
-        
-        you can modify your events with keyup.enter or keyup.ctrl.enter
-        full list of modifiers here:
-        https://vuejs.org/v2/guide/events.html#Key-Modifiers  
-
-        ---------------------------------------------------------
-
-        As v-bind: is equal to :
-        v-on:click is equal to @click (means onlclick, at click)
-        @keyup
+        before we bind element with v-bind: or just :
+        But there is second way to bind. It's v-model.
 
     -->
 
