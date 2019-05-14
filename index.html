@@ -1,5 +1,5 @@
 <!-- 
-@lesson 0 | Creating Vue instance
+@lesson 5 | Keyboard Events
 @Author: Shyngys Shynbolatov | wymedia@protonmail.com
 @Code from Github: https://github.com/salemalem/vue-js-tutorial
 @Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
@@ -8,7 +8,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Creating Vue instance</title>
+    <title>Keyboard Events</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -19,18 +19,38 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
-        You've recieved message: {{ message }} <br>
-        from {{ name }}
+        <h1>Keyboard Events</h1>
+        <!-- https://www.w3schools.com/jsref/dom_obj_event.asp -->
+        <label>v-on:keyup</label>
+        <input type="text" v-on:keyup="logName">
+        <br><br>
+
+        <label>v-on:keyup.enter</label>
+        <input type="text" v-on:keyup.enter="logName">
+        <br><br>
+
+        <label>v-on:keyup.alt.enter</label>
+        <input type="text" v-on:keyup.alt.enter="logName">
+
     </div>
 
     <!-- 
-        TO SHOW your variables which are defined in your script
-        you can use curly braces.
-        {{  }}
 
-        Insert your variable name, then browser will render and 
-        show value of variable.
-     -->
+        you can use on:keyup, on:keydown & on:keypress
+
+        ---------------------------------------------------------        
+        
+        you can modify your events with keyup.enter or keyup.ctrl.enter
+        full list of modifiers here:
+        https://vuejs.org/v2/guide/events.html#Key-Modifiers  
+
+        ---------------------------------------------------------
+
+        As v-bind: is equal to :
+        v-on:click is equal to @click (means onlclick, at click)
+        @keyup
+
+    -->
 
 </body>
 </html>
