@@ -32,12 +32,34 @@
         <div :class="compClasses">
             <span>IT 2 chapter</span>
         </div>
+        <hr>
+
+        <h2>Input binded with class of div below | Type name of color below or add yours in css</h2>
+        <h4>red
+            blue
+            black
+            white
+            yellow
+            green
+        </h4>
+        <input type="text" v-model="div_class">
+        <div class="binded_input" :class="div_class"></div>
 
     </div>
 
     <!-- 
         
-        
+        nearby = !nearby
+        Our nearby value is boolean. So !true = false. 
+
+        ------------------------------------------------
+
+        Type your color name then div will be filled by this color.
+        Vue.js just edits class name of div.binded_input.
+
+        ------------------------------------------------
+
+        Good luck :)
         
     -->
 

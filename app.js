@@ -10,6 +10,7 @@ let app = new Vue({
     data: {
     	available: true,
     	nearby: false,
+        div_class: "red",
     },
     methods: {
 
@@ -28,5 +29,6 @@ let app = new Vue({
  * In the example above I use message and name variables.
  * You can name your new variables and put them your value
  *---------------------------------------------------------
- * 
+ * compClasses are just returns values available or not available, 
+ * nearby or not nearby.
  */

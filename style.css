@@ -20,3 +20,15 @@
  	content: "nearby";
  	margin-left: 10px;
  }
+
+ .binded_input{
+ 	width: 200px;
+ 	height: 200px;
+ }
+
+ .red{ background: red; }
+ .blue{ background: blue; }
+ .black{ background: black; }
+ .white{ background: white; }
+ .yellow{ background: yellow; }
+ .green{ background: green; }
