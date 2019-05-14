@@ -1,8 +1,14 @@
+<!-- 
+@lesson 10 | Looping with v-for | Cycles
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vue js template</title>
+    <title>Looping with v-for</title>
     <!--  STYLES  -->
     <link rel="stylesheet" href="style.css">
     
@@ -13,8 +19,155 @@
 <body>
     <div id="app">
         <!--  CONTENT  -->
+        <h1>Looping with v-for</h1>
+        <h2>Frameworks | framework.name</h2>
+        <ul>
+            <li v-for="framework in frameworks">{{framework.name}}</li>
+        </ul>
+        <hr>
+
+        <h2>Characters | character</h2>
+        <ul>
+            <li v-for="character in characters" v-text="character"></li>
+        </ul>
+        <hr>
+
+        <h2>Name | name</h2>
+        <ul>
+            <li v-for="name in name" v-text="name"></li>
+        </ul>
+        <hr>
+
+        <h2>Frameworks | framework.name | index</h2>
+        <ul>
+            <li v-for="(frameworks, index) in frameworks">
+                {{ index }}.{{ frameworks.name }}
+            </li>
+        </ul>
+        <hr>
+
+        <h2>Frameworks | framework.name | i</h2>
+        <ul>
+            <li v-for="(frameworks, i) in frameworks">
+                {{ i }}.{{ frameworks.name }}
+            </li>
+        </ul>
+        <hr>
+
+        <!-- BAD PRACTICE -->
+        <h2>Frameworks | i | framework.name</h2>
+        <ul>
+            <li v-for="(i, frameworks) in frameworks">
+                {{ i }}.{{ frameworks.name }}
+            </li>
+        </ul>
+        <!-- END BAD PRACTICE -->
+
+        <h2>HTML Element series</h2>
+        <div v-for="(framework, index) in frameworks">
+            <h3>{{index}}.{{framework.name}}</h3>
+            <p>{{ framework.cool_level }}</p>
+        </div>
+        <!-- 
+            div..
+            div..
+            ...
+         -->
+        <hr>
+
+        <h2>Framework INDEX</h2>
+        <template v-for="(framework, index) in frameworks">
+            <h3>{{index}}.{{framework.name}}</h3>
+            <p>{{ framework.cool_level }}</p>
+        </template>
+        <!-- 
+            h3
+            p
+            h3
+            p
+            ...
+         -->
+        <hr>
+        
+        <h2>foreach(key=>value)</h2>
+        <template v-for="(val, key) in frameworks">
+            <h3>{{key}}.{{val.name}}</h3>
+            <p>{{ val.cool_level }}</p>
+        </template> 
+
+
     </div>
 
+    <!-- 
+        
+        any while. just for.
+        {{ frameworks[0] }}  
+        This will display { "name": "Vue.js", "cool_level": 99 }
+        But what if we display all elements of frameworks array.
+        
+        --------------------------------------------------------------
+
+        There are 2 ways to display framework of frameworks.
+        1) <li v-for="framework in frameworks" v-text="framework.name"></li>
+        or if it contain html v-html
+        2) <li v-for="framework in frameworks">{{framework.name}}</li>
+
+        --------------------------------------------------------------
+
+        if you now instead of in you can write of.
+        for ex find difference:
+        1) v-for="framework in frameworks"
+        2) v-for="framework of frameworks"
+
+        --------------------------------------------------------------
+
+        also type what you want instead of framework. for ex: foo
+        but I use work framework to make my code readable.
+
+        --------------------------------------------------------------
+
+        Why framework.name?
+        Just using framework will give us {name: 'Vue.js',     cool_level: 99},
+        output.
+        to access each parameter name write your object name
+        framework.parameter_name
+
+        --------------------------------------------------------------
+
+        In the character case I used just character. Because in js file I
+        defined characters as ['Jessica', 'Stella', 'Emily', 'Ray'].
+        And frameworks has 
+        {name: 'Vue.js',     cool_level: 99},
+        {name: 'React.js',   cool_level: 88}, //Yeah Vue.js is cooler))
+        {name: 'Angular.js', cool_level: 77},
+
+        Feel the difference. frameworks wrapped into json.
+
+        --------------------------------------------------------------
+
+        Look at the third example. 
+        Name: Sven printed like:
+        S
+        v
+        e
+        n
+
+        It means if this is one element it will be divided to array then printed.
+
+        --------------------------------------------------------------
+
+        I used frameworks in frameworks WHY?
+        If you know first frameworks respond to be printed, While the second one 
+        array name. They won't be confilcted. But try to make your code readable.
+        
+        --------------------------------------------------------------
+
+        Did you noticed i or index?
+        You can put like (frameworks, index) or (frameworks, i) in frameworks.
+        Put your index value of array, then index of element.
+
+        TRY TO CODE READABLE!!!
+    -->
 
 </body>
 </html>
