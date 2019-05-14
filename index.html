@@ -1,0 +1,45 @@
+<!-- 
+@lesson 11 | Simple Punchbag Game
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Punchbag Game</title>
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--  JS  -->
+    <script src="https://unpkg.com/vue"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--  CONTENT  -->
+        <h1>Simple Punchbag Game</h1>
+
+        <!-- bag image -->
+        <div id="bag" :class="{ burst: ended }"></div>
+
+        <!-- bag health -->
+        <div id="bag-health">
+            <div :style="{width: health+'%'}"></div>
+        </div>
+
+        <!-- game controls -->
+        <div id="controls">
+            <button @click="punch"   v-show="!ended">Punch</button>
+            <button @click="restart">Restart</button>
+        </div>
+
+    </div>
+
+    <!-- 
+        
+    -->
+
+</body>
+</html>
