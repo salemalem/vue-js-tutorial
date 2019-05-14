@@ -1,0 +1,59 @@
+<!-- 
+@lesson 9 | Conditionals ( v-if & v-show )
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionals ( v-if & v-show )</title>
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--  JS  -->
+    <script src="https://unpkg.com/vue"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!--  CONTENT  -->
+        <h1>Conditionals ( v-if & v-show )</h1>
+        <h2>v-if v-if</h2>
+        <button @click="error=!error">Toggle Error</button>
+        <button @click="success=!success">Toggle Success</button>
+        <p v-if="error">Oops, There has been an error</p>
+        <p v-if="success">Hurray, There has been an success</p>
+        <hr>
+
+        <h2>v-if v-else-if</h2>
+        <button @click="error=!error">Toggle Error</button>
+        <button @click="success=!success">Toggle Success</button>
+        <p v-if="error">Oops, There has been an error</p>
+        <p v-else-if="success">Hurray, There has been an success</p>
+
+        <h2>v-show</h2>
+        <button @click="error=!error">Toggle Error</button>
+        <button @click="success=!success">Toggle Success</button>
+        <p v-show="error">Oops, There has been an error</p>
+        <p v-show="success">Hurray, There has been an success</p>
+    </div>
+
+    <!-- 
+        
+        Difference between v-if and v-show:
+        v-if manipulates dom. Deletes if false or inserts if true.
+        If you put v-else-if first it will be error. 
+        Because any if you putted above.
+
+        v-show manipulates style. It just puts style="display=none"
+        then element will be hidden on html page.
+
+        v-show don't have any v-else-show. 
+        Just shows if true.
+        
+    -->
+
+</body>
+</html>
