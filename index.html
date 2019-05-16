@@ -1,0 +1,72 @@
+<!-- 
+@lesson 13 | Intro to Components
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Vue Instances</title>
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--  JS  -->
+    <script src="https://unpkg.com/vue"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!--  CONTENT  -->
+    <h1>Multiple Vue Instances</h1>
+    <div id="vue-app-one">
+        <h2>First app</h2>
+
+        <h5>Greeting</h5>
+        <greeting></greeting>
+        <br>
+
+        <h5>Hello</h5>
+        <hello></hello>
+    </div>
+    <hr>
+    <div id="vue-app-two">
+        <h2>Second app</h2>
+
+        <h5>Greeting</h5>
+        <greeting></greeting>
+        <br>
+
+        <h5>Hello</h5>
+        <hello></hello>
+    </div>
+
+
+    <!-- 
+        Components are reusable. You can use them multiple times.
+        BUT only inside of Vue app. I mean. only in initialized in app.js
+        
+        ------------------------------------------------------
+    
+        <p>Hello, I am {{ name }} <button @click="changeName">changeName</button></p>
+        It's our greeting template.
+
+        ------------------------------------------------------
+
+        If you click first button of greeting template.
+        Only name of first greeting template will be changed.
+        It means each greeting template lives and works independent.
+
+        What about hello?
+
+        Why onclick it change all Shyngys to Mario?
+        Because data of hello returns road to variable data.
+
+        Once you click it will change variable.
+
+        Both templates get value or data from variable
+        so both value will change.
+    -->
+
+</body>
+</html>
