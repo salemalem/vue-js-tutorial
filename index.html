@@ -1,0 +1,43 @@
+<!-- 
+@lesson 12 | Multiple Vue Instances
+@Author: Shyngys Shynbolatov | wymedia@protonmail.com
+@Code from Github: https://github.com/salemalem/vue-js-tutorial
+@Site on github free hosting: https://salemalem.github.io/vue-js-tutorial/
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multiple Vue Instances</title>
+    <!--  STYLES  -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!--  JS  -->
+    <script src="https://unpkg.com/vue"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!--  CONTENT  -->
+    <h1>Multiple Vue Instances</h1>
+    <div id="vue-app-one">
+        <h2>{{ title }}</h2> 
+        <p>{{ greet }}</p>
+    </div>
+
+    <div id="vue-app-two">
+        <h2>{{ title }}</h2>
+        <p>{{ greet }}</p>
+        <button @click="changeTitle1">Change App one title</button>
+    </div>
+
+    <!-- 
+        do you remember when we had only one div#app.
+        now We have two Vue divs.
+        You can create more.
+
+        And they are indenpendent by each other.
+        READ COMMENTS IN JS!
+    -->
+
+</body>
+</html>
