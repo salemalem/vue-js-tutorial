@@ -42,6 +42,27 @@ let app2 = new Vue({
     el: '#vue-app-two',
 });
 
+let app3 = new Vue({
+    el: '#vue-app-three',
+    components:{
+        'app-car':{
+            data(){
+                return{
+                    cars:[
+                        {model: "BMW"},
+                        {model: 'Volvo'},
+                        {model: 'Mercedes-Benz'},
+                        {model: 'Ford'},
+                        {model: 'Audi'},
+                        {model: 'Siat'},
+                        {model: 'Fiat'},
+                    ]
+                } 
+            },
+            template: '<div><p v-for="car in cars">{{car.model}}</p></div>'
+        }
+    }
+});
 /* To call the component first of all define some Vue app.
  * Else error.
  * ------------------------------------------------------ 
@@ -63,6 +84,9 @@ let app2 = new Vue({
  * <p>Hello, I am {{ name }}</p><button @click="changeName">changeName</button>
  * If you put component template like this, it will be error.
  * Cause you need to wrap it into root element.
+ * ------------------------------------------------------
+ * Vue.component method register components globally! It means any vue app can use it.
+ * You can also register locally. See app3
  * ------------------------------------------------------
  * We use our component in the first two vue apps in html.
  * See html comments
