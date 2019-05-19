@@ -1,19 +1,29 @@
-## Learn Vue.js STEP BY STEP <img src="https://raw.githubusercontent.com/vuejs/art/master/logo.png" width=50px title="Learn Vue.js STEP BY STEP">
+# lsn15
 
-## or just Vue.js Developer notes
+## Project setup
+```
+npm install
+```
 
-Before you get started, you need to have fundamentals in HTML, CSS and JavaScript.
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-# About structure of repository.
-1. Switch between branches. 
-2. Every branch (lesson) or note has documentation. It's README.md
+### Compiles and minifies for production
+```
+npm run build
+```
 
- @Author: Shyngys Shynbolatov wymedia@protonmail.com
----
-_If you want to support (contribute), I'm waiting for your pull requests._ 
+### Run your tests
+```
+npm run test
+```
 
-URL: *https://salemalem.github.io/vue-js-tutorial/*
+### Lints and fixes files
+```
+npm run lint
+```
 
-**Inspired by https://github.com/iamshaunjp/vuejs-playlist**
-
-**Dojo of The Net Ninja**
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
