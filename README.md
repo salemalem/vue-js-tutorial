@@ -1,12 +1,6 @@
-## Learn Vue.js STEP BY STEP <img src="https://raw.githubusercontent.com/vuejs/art/master/logo.png" width=50px title="Learn Vue.js STEP BY STEP">
+## Installation
+https://cli.vuejs.org/guide/installation.html
 
-## or just Vue.js Developer notes
-
-Before you get started, you need to have fundamentals in HTML, CSS and JavaScript.
-
-# About structure of repository.
-1. Switch between branches. 
-2. Every branch (lesson) or note has documentation. It's README.md
 
  @Author: Shyngys Shynbolatov wymedia@protonmail.com
 ---
